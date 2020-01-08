@@ -1,0 +1,1958 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'Inconsolata', monospace;
+    src: url(fonts/Inconsolata-Regular.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inconsolata', monospace;
+    src: url(fonts/Inconsolata-Regular.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+.burger .toggle-btn {
+    position: relative;
+    left: 10px;
+    width: 50px;
+    cursor: pointer;
+    color: #e8b15e;
+    margin: 5px;
+    text-align: right;
+}
+
+.burger span {
+    grid-area: header;
+    text-align: right;
+    position: relative;
+    top: 0px;
+    display: block;
+    width: 90%;
+    height: 4px;
+    margin: 8px 0px;
+    background-color: darkred;
+    z-index: 2;
+}
+
+.burger .toggle-btn.active span:nth-child(1) {
+    top: 14px;
+    transform: rotate(45deg);
+    transition: top 200ms ease-in-out 0ms, transform 250ms ease-in-out 150ms;
+}
+
+.burger .toggle-btn.active span:nth-child(3) {
+    top: -10px;
+    transform: rotate(-45deg);
+    transition: top 200ms ease-in-out 0ms, transform 250ms ease-in-out 150ms;
+}
+
+.burger .toggle-btn.active span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 50ms ease-in-out 150ms;
+}
+
+.burger .toggle-btn span:nth-child(1),
+.buger .toggle-btn span:nth-child(3) {
+    transition: transform 250ms ease-in-out 0ms, top 200ms ease-in-out 150ms;
+}
+
+.burger .toggle-btn span:nth-child(2) {
+    opacity: 1;
+    transition: opacity 50ms ease-in-out 200ms;
+}
+
+.sidebar {
+    position: fixed;
+    top: -100%;
+    width: 96.5%;
+    height: 15%;
+    background-color: #F4F5F6;
+    padding: 15px;
+    opacity: 0;
+    transition: all 450ms ease-in-out;
+    z-index: 1;
+    color: white;
+    border: none;
+}
+
+#sidebar .option {
+    font-size: 20px;
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    text-transform: lowercase;
+    padding: 15px 5px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.sidebar.active {
+    opacity: 1;
+    top: 5px;
+    width: 90%;
+    color: white;
+    z-index: 1;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #254558;
+    background-color: transparent;
+}
+
+.sidebar a:hover {
+    color: #F2EEEB;
+}
+
+/*INDEX PAGE*/
+a {
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: solid black;
+}
+
+#indexcontainer {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "main main"
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+/*HEADER*/
+
+.topnav {
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 15%;
+    display: inline;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.topnav a {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #254558;
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+.topnav a:hover {
+    color: #e8b15e;
+    border-bottom: solid #F2EEEB;
+}
+
+.active {
+    color: #e8b15e;
+    border-bottom: solid #F2EEEB;
+}
+
+.logo {
+    margin-left: 15%;
+    margin-top: 20px;
+    z-index: -1;
+}
+
+/*INDEX PAGE*/
+
+/*BASICWEB*/
+
+#basicweb {
+    width: 500px;
+    height: 500px;
+    background-color: #2B2B3A;
+    padding: 100px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #F4F5F6;
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.center {
+    text-align:center;
+    width:100%;
+    
+}
+.center:first-child {
+    margin:auto;
+    text-align:center;
+}
+
+#basicweb:hover {
+    cursor: pointer;
+}
+
+.bwtitle {
+    font-size: 4em;
+    padding: 100px;
+}
+
+.b {
+    color: #e8b15e;
+}
+
+/*BASIC ANIMATION*/
+
+#basicanimation {
+    width: 500px;
+    height: 500px;
+    background-color: #e8cfa8;
+    padding: 100px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#basicanimation:hover {
+    cursor: pointer;
+}
+
+.batitle {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4em;
+    color: #2B2B3A;
+    padding: 50px;
+}
+
+.ban {
+    color: #e8b15e;
+}
+
+/*BASIC CONTENT*/
+
+#basiccontent {
+    width: 500px;
+    height: 500px;
+    background-color: #586673;
+    padding: 100px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#basiccontent:hover {
+    cursor: pointer;
+}
+
+.bctitle {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4em;
+    color: #2B2B3A;
+    padding: 50px;
+}
+
+.bco {
+    color: #e8b15e;
+}
+
+/* BASIC UX*/
+
+#basicux {
+    width: 500px;
+    height: 500px;
+    background-color: #b8a563;
+    padding: 100px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#basicux:hover {
+    cursor: pointer;
+}
+
+.uxtitle {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4em;
+    color: #F4F5F6;
+    padding: 100px;
+}
+
+.bux {
+    color: #e8b15e;
+}
+
+.burger {
+    display: none;
+}
+
+
+/*ABOUT ME PAGE*/
+
+#aboutcontainer {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "main main main"
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.portrait {
+    grid-area: main;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top: 30px;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+.name {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    font-size: 3em;
+    text-align: center;
+    text-transform: inherit;
+}
+
+.aboutme {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    font-size: 2em;
+    text-align: center;
+    text-transform: inherit;
+    margin-top: 40px;
+    border-top: solid #e8b15e;
+}
+
+
+.location {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
+    padding: 80px;
+}
+
+.education {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
+    padding: 80px;
+}
+
+.books {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
+    padding: 80px;
+}
+
+.from {
+    text-align: center;
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    padding: 10px;
+    color: #254558;
+    text-transform: inherit;
+}
+
+.school {
+    text-align: center;
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    padding: 10px;
+    color: #254558;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: inherit;
+}
+
+.bookworm {
+    text-align: center;
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    padding: 10px;
+    color: #254558;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: inherit;
+}
+
+.podcast {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin-top: 50px;
+    text-align: center;
+    transform: scale(0.8);
+    border-top: solid #e8b15e;
+}
+
+.podcast:hover {
+    cursor: pointer;
+}
+
+/*BASIC WEB PAGE*/
+#webcontainer {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "main main"
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.basicweb {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 6em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    color: #254558;
+}
+
+.responsive {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+
+.focusweb {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    color: #254558;
+    margin-left: 10%;
+    margin-top: 12%;
+    padding: 60px;
+}
+
+.focus {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    border-bottom: solid #e8b15e;
+}
+
+.gainsweb {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding: 60px;
+    color: #254558;
+    margin-top: 12%;
+    margin-right: 10%;
+}
+
+.link {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    transform: scale(0.8);
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+    display: inline;
+}
+
+
+.look {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+}
+
+.here {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    color: #254558;
+    border-bottom: solid #e8b15e;
+}
+
+.here:hover {
+    cursor: pointer;
+    color: #e8b15e;
+    border-bottom: solid #254558;
+}
+
+.imageinfo {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.8em;
+}
+
+.backbutton {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin-left: 12%;
+    transform: scale(0.9);
+}
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
+
+
+#slider {
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: center;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+
+#slidertwo {
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#slidertwo figure img {
+    width: 20%;
+    float: left;
+}
+
+#slidertwo figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: center;
+    font-size: 0;
+    animation: 20s slidy infinite;
+}
+
+/*BASIC ANIMATION PAGE*/
+
+
+#animationcontainer {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "main main"
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.basicanimation {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 6em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    color: #254558;
+}
+
+.storytelling {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+
+.focusanimation {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    color: #254558;
+    margin-left: 10%;
+    margin-top: 12%;
+    padding: 60px;
+}
+
+
+.gainsanimation {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding: 60px;
+    color: #254558;
+    margin-top: 12%;
+    margin-right: 10%;
+}
+
+
+/*OMBOARDING SECTION*/
+
+.omboarding {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.taskomb {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    color: #254558;
+    margin-left: 10%;
+    margin-top: 12%;
+    padding: 60px;
+}
+
+.gainsomb {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    padding: 60px;
+    color: #254558;
+    margin-top: 12%;
+    margin-right: 10%;
+}
+
+.back {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+    margin-left: 12%;
+    transform: scale(0.9);
+}
+
+
+/* BASIC CONTENT*/
+
+.focuscontent {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    color: #254558;
+    margin-left: 10%;
+    padding: 60px;
+}
+
+.gainscontent {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding: 60px;
+    color: #254558;
+    margin-right: 10%;
+}
+
+.basiccontent {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 6em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    color: #254558;
+}
+
+.canvas {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.2em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.bikepage {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.focuscontentone {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    color: #254558;
+    margin-left: 10%;
+    padding: 60px;
+}
+
+.gainscontentone {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    padding: 60px;
+    color: #254558;
+    margin-right: 10%;
+}
+
+/*BASIC UX*/
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.basicux {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 6em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    color: #254558;
+}
+
+.sprint {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.focusux {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    color: #254558;
+    margin-left: 10%;
+    padding: 60px;
+}
+
+.gainsux {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding: 60px;
+    color: #254558;
+    margin-right: 10%;
+}
+
+.sprintone {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.uxprototype {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1100px) {
+
+    #basicweb {
+        width: 400px;
+        height: 400px;
+    }
+
+    .bwtitle {
+        font-size: 2em;
+        padding: 100px;
+    }
+
+    #basicanimation {
+        width: 400px;
+        height: 400px;
+    }
+
+    .batitle {
+        font-size: 2em;
+        padding: 80px;
+    }
+
+    #basiccontent {
+        width: 400px;
+        height: 400px;
+    }
+
+    .bctitle {
+        font-size: 2em;
+        padding: 80px;
+    }
+
+    #basicux {
+        width: 400px;
+        height: 400px;
+    }
+
+    .uxtitle {
+        font-size: 2em;
+        padding: 100px;
+    }
+
+    .topnav a {
+        font-size: 1.3em;
+    }
+
+    .logo {
+        transform: scale(0.9);
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .from {
+        font-size: 1em;
+        padding: 0px;
+    }
+
+    .school {
+        font-size: 1em;
+        padding: 0px;
+    }
+
+    .bookworm {
+        font-size: 1em;
+        padding: 0px;
+    }
+
+    .portrait {
+        text-align: center
+    }
+
+    .greeting {
+        font-size: 2em;
+    }
+
+    .name {
+        font-size: 2em;
+    }
+
+    .aboutme {
+        font-size: 2em;
+    }
+
+    .basicweb {
+        font-size: 3em;
+    }
+
+    .basiccontent {
+        font-size: 3em;
+    }
+
+    .basicux {
+        font-size: 3em;
+    }
+
+    .focusweb {
+        font-size: 1em;
+    }
+
+    .focuscontent {
+        font-size: 1em;
+    }
+
+    .focusux {
+        font-size: 1em;
+    }
+
+    .focusanimation {
+        font-size: 1em;
+    }
+
+    .taskomb {
+        font-size: 1em;
+    }
+
+    .gainsweb {
+        font-size: 1em;
+    }
+
+    .gainscontent {
+        font-size: 1em;
+    }
+
+    .gainsux {
+        font-size: 1em;
+    }
+
+    .gainsanimation {
+        font-size: 1em;
+    }
+
+    .gainsomb {
+        font-size: 1em;
+    }
+
+    .backbutton {
+        transform: scale(0.7);
+        margin-top: 0;
+    }
+
+    .back {
+        transform: scale(0.7);
+        margin-top: 0;
+    }
+}
+
+
+
+@media (max-width:850px) {
+
+    #basicweb {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bwtitle {
+        font-size: 1em;
+        padding: 100px;
+    }
+
+    #basicanimation {
+        width: 300px;
+        height: 300px;
+    }
+
+    .batitle {
+        font-size: 1em;
+        padding: 80px;
+    }
+
+    #basiccontent {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bctitle {
+        font-size: 1em;
+        padding: 80px;
+    }
+
+    #basicux {
+        width: 300px;
+        height: 300px;
+    }
+
+    .uxtitle {
+        font-size: 1em;
+        padding: 100px;
+    }
+
+    .logo {
+        transform: scale(0.8);
+    }
+
+    .burger {
+        display: none;
+    }
+
+    #aboutcontainer {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+    }
+
+    .greeting {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        font-size: 3em;
+    }
+
+    .location {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        font-size: 1.3em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 30px;
+    }
+
+    .portrait {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .aboutme {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        font-size: 2.5em;
+    }
+
+    .name {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        font-size: 3em;
+    }
+
+    .education {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        font-size: 1.3em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 30px;
+    }
+
+    .books {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 9;
+        font-size: 1.3em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 30px;
+    }
+
+    .podcast {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 10;
+    }
+
+    .name {
+        font-size: 2.3em;
+    }
+
+    .basicweb {
+        font-size: 3em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .basiccontent {
+        font-size: 3em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: center;
+        margin: 0px
+    }
+
+    .basicux {
+        font-size: 3em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: center;
+        margin: 0px
+    }
+
+    .basicanimation {
+        font-size: 3em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: center;
+        margin: 0px
+    }
+
+    .responsive {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 2em;
+    }
+
+    .canvas {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 2em;
+    }
+
+    .sprint {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 2em;
+    }
+
+    .storytelling {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 2em;
+    }
+
+    .onboarding {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        font-size: 2em;
+    }
+
+
+    .focusweb {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .focuscontent {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .focusux {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .focusanimation {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .taskomb {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 10;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #slider {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    #slidertwo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+
+    .gainsweb {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .gainscontent {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .gainsux {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .gainsanimation {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .gainsomb {
+        font-size: 1em;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 10;
+        grid-row-end: 11;
+        text-align: center;
+        margin-top: 10%;
+        padding: 20px;
+        margin-left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .backbutton {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 9;
+        margin-left: 0%;
+    }
+
+    .back {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 12;
+        margin-left: 0%;
+    }
+
+    #webcontainer {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+    }
+
+    #animationcontainer {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+    }
+}
+
+@media (max-width:630px) {
+
+    #indexcontainer {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+    }
+
+    #basicweb {
+        width: 400px;
+        height: 400px;
+    }
+
+    .bwtitle {
+        font-size: 1.8em;
+        padding: 100px;
+    }
+
+    #basicanimation {
+        width: 400px;
+        height: 400px;
+    }
+
+    .batitle {
+        font-size: 1.8em;
+        padding: 80px;
+    }
+
+    #basiccontent {
+        width: 400px;
+        height: 400px;
+    }
+
+    .bctitle {
+        font-size: 1.8em;
+        padding: 80px;
+    }
+
+    #basicux {
+        width: 400px;
+        height: 400px;
+    }
+
+    .uxtitle {
+        font-size: 1.8em;
+        padding: 100px;
+    }
+
+    .topnav a {
+        font-size: 1.3em;
+    }
+
+    .logo {
+        transform: scale(0.9);
+    }
+
+    .burger {
+        display: none;
+    }
+
+    #aboutcontainer {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+    }
+
+    .location {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+
+    .from {
+        font-size: 1.2em;
+    }
+
+    .portrait {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .aboutme {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        font-size: 1.5em;
+    }
+
+    .name {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        font-size: 1.8em;
+    }
+
+    .education {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+
+    .school {
+        font-size: 1.2em;
+    }
+
+    .books {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 9;
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+
+    .bookworm {
+        font-size: 1.2em;
+    }
+
+    .podcast {
+        transform: scale(0.8);
+    }
+
+    .basicweb {
+        margin-top: 30px;
+        font-size: 2.3em;
+    }
+
+    .basiccontent {
+        margin-top: 30px;
+        font-size: 2.3em;
+    }
+
+    .basicux {
+        margin-top: 30px;
+        font-size: 2.3em;
+    }
+
+    .basicanimation {
+        margin-top: 30px;
+        font-size: 2.3em;
+    }
+
+    .responsive {
+        font-size: 1.8em;
+    }
+
+    .canvas {
+        font-size: 1.8em;
+    }
+
+    .sprint {
+        font-size: 1.8em;
+    }
+
+    .storytelling {
+        font-size: 1.8em;
+    }
+
+    .onboarding {
+        font-size: 1.8em;
+    }
+}
+
+
+@media (max-width:450px) {
+
+
+    #basicweb {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bwtitle {
+        font-size: 1em;
+        padding: 100px;
+    }
+
+    #basicanimation {
+        width: 300px;
+        height: 300px;
+    }
+
+    .batitle {
+        font-size: 1em;
+        padding: 80px;
+    }
+
+    #basiccontent {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bctitle {
+        font-size: 1em;
+        padding: 80px;
+    }
+
+    #basicux {
+        width: 300px;
+        height: 300px;
+    }
+
+    .uxtitle {
+        font-size: 1em;
+        padding: 100px;
+    }
+
+    .burger {
+        display: inline;
+    }
+
+
+    .burger span {
+        text-align: right;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .logoburger {
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        transform: scale(0.8);
+    }
+
+    .portrait {
+        display: none;
+    }
+
+    .education {
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
+
+    .location {
+        font-size: 0.8em;
+    }
+
+    .books {
+        font-size: 0.8em;
+    }
+
+    .portraitsmall {
+        display: block;
+        text-align: center;
+    }
+
+    .basicweb {
+        font-size: 2em;
+        margin-top: 30px;
+    }
+
+    .basiccontent {
+        font-size: 2em;
+        margin-top: 30px;
+    }
+
+    .basicux {
+        font-size: 2em;
+        margin-top: 30px;
+    }
+
+    .basicanimation {
+        font-size: 2em;
+        margin-top: 30px;
+    }
+
+    .responsive {
+        font-size: 1.2em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .canvas {
+        font-size: 1.2em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .sprint {
+        font-size: 1.2em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .storytelling {
+        font-size: 1.2em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .omboarding {
+        font-size: 1.2em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+
+    .backbutton {
+        text-align: left;
+    }
+
+    .back {
+        text-align: left;
+    }
+}
